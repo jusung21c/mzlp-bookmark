@@ -5,11 +5,14 @@
   "description": "bookmark sidebar for Atom.io",
   "keywords": [
     "mzlp",
-    "symbol",
+    "bookmark",
     "symbols-list",
     "sidebar"
   ],
-  "repository": "https://github.com/jusung21c/mzlp-bookmark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jusung21c/mzlp-bookmark.git"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
