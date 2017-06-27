@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle symbols-list",
+        "label": "Toggle mzlp-bookmark",
         "command": "symbols-list:toggle"
       }
     ]
@@ -12,7 +12,7 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "symbols-list",
+          "label": "mzlp-bookmark",
           "submenu": [
             {
               "label": "Toggle",
