@@ -1,8 +1,8 @@
 {
   ".platform-darwin": {
-    "cmd-alt-w": "symbols-list:toggle"
+    "cmd-alt-e": "symbols-list:toggle"
   },
   ".platform-win32, .platform-linux": {
-    "ctrl-alt-w": "symbols-list:toggle"
+    "ctrl-alt-e": "symbols-list:toggle"
   }
 }

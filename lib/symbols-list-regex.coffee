@@ -5,7 +5,7 @@ module.exports =
     source:
         DEFINITION:
             regex:
-                jinie: /[^\S\n]*JINIE\s+([\w. ]*)/gmi        
+                jinie: /[^\S\n]*JINIE\s+([\w. ]*)/gmi
         js:
             regex:
                 commentaire: /^[^\S\n]*\/\/ ! (.+)/gmi

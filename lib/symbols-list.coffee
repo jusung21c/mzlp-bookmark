@@ -25,7 +25,7 @@ module.exports =
         SymbolsList = this
 
         # set initial visiblilty state
-        @isVisible = atom.config.get('symbols-list.basic.startUp')
+        @isVisible = atom.config.get('mzlp-bookmark.basic.startUp')
 
         # add event handlers
         @subscriptions = new CompositeDisposable
@@ -44,8 +44,8 @@ module.exports =
         SymbolsList.reloadSymbols()
 
         # set width of panel
-        if atom.config.get('symbols-list.basic.panelWidth')
-            newWidth = parseInt( atom.config.get('symbols-list.basic.panelWidth') )
+        if atom.config.get('mzlp-bookmark.basic.panelWidth')
+            newWidth = parseInt( atom.config.get('mzlp-bookmark.basic.panelWidth') )
             @SymbolsListView.element.style.width = newWidth + 'px'
 
     reloadSymbols: ->
@@ -109,7 +109,7 @@ module.exports =
                 CursorBufferPosition = SymbolsList.editor.getCursorBufferPosition()
                 SymbolsList.updateActiveItem(CursorBufferPosition)
             else
-                if atom.config.get('symbols-list.basic.hideOnEmptyList')
+                if atom.config.get('mzlp-bookmark.basic.hideOnEmptyList')
                     SymbolsList.panel.hide()
                 else
                     SymbolsList.panel.show()
@@ -120,7 +120,7 @@ module.exports =
     updateActiveItem: (e) ->
 
         # TODO: currently no active item updates on alphabetical sorting
-        if atom.config.get('symbols-list.basic.alphabeticalSorting')
+        if atom.config.get('mzlp-bookmark.alphabeticalSorting')
             return
 
         if e.row?
@@ -156,7 +156,7 @@ module.exports =
 
     moveToRange: (range) ->
 
-        PositionAfterJump = atom.config.get('symbols-list.positioning.positionAfterJump')
+        PositionAfterJump = atom.config.get('mzlp-bookmark.positioning.positionAfterJump')
 
         Editor = atom.workspace.getActiveTextEditor()
         Editor.setCursorBufferPosition(range.start)
@@ -169,7 +169,7 @@ module.exports =
             PixelPosition -= (Editor.getHeight() / 2);
             Editor.setScrollTop PixelPosition
         else
-            PositionScroll = atom.config.get('symbols-list.positioning.positionScroll')
+            PositionScroll = atom.config.get('mzlp-bookmark.positioning.positionScroll')
             LineHeight = Editor.getLineHeightInPixels()
             if PositionAfterJump == 'ScrollFromTop'
                 PixelPosition -= (LineHeight * PositionScroll);

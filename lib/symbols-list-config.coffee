@@ -42,5 +42,5 @@ module.exports =
             order: 2
             title: "Position Scroll"
             type: ["integer"]
-            default: 20
+            default: 2
             description: "positive value = scroll from top / negative value = scroll from bottom"
