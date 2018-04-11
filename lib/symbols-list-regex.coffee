@@ -6,6 +6,9 @@ module.exports =
         DEFINITION:
             regex:
                 jinie: /[^\S\n]*JINIE\s+([\w. ]*)/gmi
+        SCENARIO:
+            regex:
+                scenario : /\"BASE\"[,\s\t]*\"(.*?)\"/gmi                
         js:
             regex:
                 commentaire: /^[^\S\n]*\/\/ ! (.+)/gmi
